@@ -16,6 +16,13 @@ public class ThreadPriority {
 		
 		threadOne.start();
 		threadTwo.start();
+		
+		try {
+			threadTwo.join();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }
